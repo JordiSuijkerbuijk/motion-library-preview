@@ -1,0 +1,23 @@
+.gap {
+  gap: 2rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.slice {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.durationInput {
+  position: fixed;
+  top: 8rem;
+  right: 4rem;
+}
+
+.durationInput input {
+  width: 4rem;
+}
