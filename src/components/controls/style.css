@@ -1,0 +1,10 @@
+.durationInput {
+  position: fixed;
+  top: 8rem;
+  right: 4rem;
+  z-index: 10;
+}
+
+.durationInput input {
+  width: 4rem;
+}

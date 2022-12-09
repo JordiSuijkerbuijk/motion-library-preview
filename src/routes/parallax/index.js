@@ -1,22 +1,18 @@
 import clsx from 'clsx';
-import { animateGroup } from 'hackathon-motion-library/animateGroup';
-import { basic, basicFadeIn } from 'hackathon-motion-library/animationTypes/basic';
+import { animateOnScroll } from 'hackathon-motion-library/animateOnScroll';
+import parallax from 'hackathon-motion-library/animationTypes/parallax';
 import { useEffect, useState } from 'preact/hooks';
-import Basic from '../../components/basic';
 import Controls from '../../components/controls';
 import Image from '../../components/image';
 import { removeInlineStyling } from '../../utils/removeInlineStyling';
 import style from './style.css';
 
-const animationTypes = { basic: basic, basicFadeIn: basicFadeIn };
+const animationTypes = { parallax: parallax };
 
-const sections = [
-  { key: 'basic', value: Basic },
-  { key: 'image', value: Image },
-];
+const sections = [{ key: 'image', value: Image }];
 
 const AnimateGroup = () => {
-  const [options, setOptions] = useState({ duration: 600, type: 'basic' });
+  const [options, setOptions] = useState({ duration: 600, type: 'parallax' });
 
   useEffect(() => {
     //Remove inline styling from previous animation
@@ -24,7 +20,7 @@ const AnimateGroup = () => {
 
     sections.map((item) => {
       const element = document.querySelector(`#${item.key}`);
-      animateGroup({ target: element, options: { ...options } });
+      animateOnScroll({ target: element, options: { ...options } });
     });
   }, [options]);
 
@@ -37,8 +33,10 @@ const AnimateGroup = () => {
 
         return (
           //Every slice will be 100vh so we can correctly test the animations
-          <section id={item.key} key={i} class={style.slice}>
-            <Comp />
+          <section key={i} class={style.slice}>
+            <div class={style.imageWrapper}>
+              <Comp id={item.key} />
+            </div>
           </section>
         );
       })}

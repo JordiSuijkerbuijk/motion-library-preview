@@ -1,0 +1,10 @@
+.slice {
+  height: 300vh;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapper {
+  min-height: 100vh;
+  height: 100vh;
+}

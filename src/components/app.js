@@ -5,6 +5,7 @@ import Header from './header';
 // Code-splitting is automated for `routes` directory
 import AnimateGroup from '../routes/animateGroup';
 import Home from '../routes/home';
+import Parallax from '../routes/parallax';
 import style from './style.css';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Router>
           <Home path='/' />
           <AnimateGroup path='/animateGroup' />
+          <Parallax path='/parallax' />
         </Router>
       </div>
     </div>
