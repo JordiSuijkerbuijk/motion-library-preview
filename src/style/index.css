@@ -49,3 +49,16 @@ select {
   padding: 0.5rem;
   width: auto;
 }
+
+/* Make sure number input shows without the arrows so we can create range selector */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

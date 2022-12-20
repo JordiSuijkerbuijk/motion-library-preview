@@ -1,8 +1,12 @@
-.gap {
-  gap: 2rem;
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
 }
 
-.flex {
+.sectionsWrapper {
+  padding: 7rem 4rem;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
 }

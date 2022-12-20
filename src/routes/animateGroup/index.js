@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import { animateGroup } from 'hackathon-motion-library/animateGroup';
 import { basic, basicFadeIn } from 'hackathon-motion-library/animationTypes/basic';
 import { useEffect, useState } from 'preact/hooks';
@@ -29,19 +28,20 @@ const AnimateGroup = () => {
   }, [options]);
 
   return (
-    <div class={clsx([style.flex, style.gap])}>
+    <div class={style.container}>
+      <div class={style.sectionsWrapper}>
+        {sections.map((item, i) => {
+          const Comp = item.value;
+
+          return (
+            //Every slice will be 100vh so we can correctly test the animations
+            <section id={item.key} key={i} class={style.slice}>
+              <Comp />
+            </section>
+          );
+        })}
+      </div>
       <Controls options={options} setOptions={setOptions} animationTypes={animationTypes} />
-
-      {sections.map((item, i) => {
-        const Comp = item.value;
-
-        return (
-          //Every slice will be 100vh so we can correctly test the animations
-          <section id={item.key} key={i} class={style.slice}>
-            <Comp />
-          </section>
-        );
-      })}
     </div>
   );
 };
