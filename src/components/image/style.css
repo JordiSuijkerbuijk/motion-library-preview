@@ -1,3 +1,12 @@
 .imageWrapper {
   width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.imageWrapper img {
+  max-width: 125%;
 }

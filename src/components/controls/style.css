@@ -1,10 +1,22 @@
-.durationInput {
+.controls {
   position: fixed;
-  top: 8rem;
-  right: 4rem;
-  z-index: 10;
+  top: 2.75rem;
+  right: 0;
+  z-index: 20;
+  background-color: hsl(246 6% 9%);
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.75rem;
+  display: grid;
+  gap: 0.75rem 0.5rem;
+  height: calc(100% - 2.75rem);
+  grid-template-rows: max-content;
 }
 
-.durationInput input {
-  width: 4rem;
+.column {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 6rem;
+  grid-auto-flow: column;
+  align-items: center;
 }

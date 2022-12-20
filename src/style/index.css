@@ -33,3 +33,19 @@ p {
 img {
   max-width: 100%;
 }
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #cca43b;
+}
+
+input,
+select {
+  background-color: hsl(241 5% 14.3%);
+  color: #fff;
+  border: 1px solid hsl(244 4.9% 21.5%);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: auto;
+}
