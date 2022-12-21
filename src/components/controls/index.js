@@ -1,9 +1,7 @@
-import style from './style.css';
-
 export default function Controls({ options, setOptions, animationTypes = {} }) {
   return (
-    <div class={style.controls}>
-      <div class={style.column}>
+    <div class='sticky top-0 right-0 z-20 bg-black text-white text-xs grid-rows-max grid h-screen gap-y-3 gap-x-2 py-14 px-4'>
+      <div class='h-fit grid grid-cols-6 grid-flow-col items-center'>
         <label>duration: </label>
         <input
           type='number'
@@ -14,7 +12,7 @@ export default function Controls({ options, setOptions, animationTypes = {} }) {
           }}
         />
       </div>
-      <div class={style.column}>
+      <div class='h-fit grid grid-cols-6 grid-flow-col items-center'>
         <label>animation type: </label>
         <select
           onChange={(e) => {

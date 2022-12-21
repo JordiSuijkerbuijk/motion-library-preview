@@ -5,7 +5,6 @@ import Basic from '../../components/basic';
 import Controls from '../../components/controls';
 import Image from '../../components/image';
 import { removeInlineStyling } from '../../utils/removeInlineStyling';
-import style from './style.css';
 
 const animationTypes = { basic: basic, basicFadeIn: basicFadeIn };
 
@@ -28,14 +27,14 @@ const AnimateGroup = () => {
   }, [options]);
 
   return (
-    <div class={style.container}>
-      <div class={style.sectionsWrapper}>
+    <div class='grid grid-flow-col grid-cols-auto'>
+      <div class='py-28 px-16 gap-8 flex flex-col'>
         {sections.map((item, i) => {
           const Comp = item.value;
 
           return (
             //Every slice will be 100vh so we can correctly test the animations
-            <section id={item.key} key={i} class={style.slice}>
+            <section id={item.key} key={i} class='min-h-screen h-full'>
               <Comp />
             </section>
           );

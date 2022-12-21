@@ -1,13 +1,11 @@
-import style from './style.css';
-
 const AnimationType = ({ type }) => (
-  <a href={`/${type}`} class={style.link}>
+  <a href={`/${type}`} class='flex flex-col gap-8'>
     <h1>Link to type</h1>
   </a>
 );
 
 const Home = () => (
-  <div class={style.home}>
+  <div>
     <h1>Animation options:</h1>
     <AnimationType type='animateGroup' />
   </div>

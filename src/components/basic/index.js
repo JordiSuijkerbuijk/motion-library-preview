@@ -1,7 +1,5 @@
-import style from './style.css';
-
 const Basic = () => (
-  <div class={style.basic}>
+  <div class='flex flex-col gap-y-4 max-w-md'>
     <h1>We grow businesses by combining technology, design and creativity</h1>
     <p>
       Whatever the challenge, we have a tailored approach for every client. From CMS-websites to

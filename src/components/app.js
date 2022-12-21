@@ -6,13 +6,12 @@ import Header from './header';
 import AnimateGroup from '../routes/animateGroup';
 import Home from '../routes/home';
 import Parallax from '../routes/parallax';
-import style from './style.css';
 
 const App = () => {
   return (
     <div id='app'>
       <Header />
-      <div class={style.wrapper}>
+      <div class=''>
         <Router>
           <Home path='/' />
           <AnimateGroup path='/animateGroup' />
