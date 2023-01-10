@@ -6,20 +6,16 @@ import Parallax from '../routes/parallax';
 import Sections from '../routes/sections';
 import Header from './header';
 
-const App = () => {
-  return (
-    <div id='app'>
-      <Header />
-      <div class=''>
-        <Router>
-          <Home path='/' />
-          <AnimateGroup path='/animateGroup' />
-          <Parallax path='/parallax' />
-          <Sections path='/sections' />
-        </Router>
-      </div>
-    </div>
-  );
-};
+const App = () => (
+  <div id='app'>
+    <Header />
+    <Router>
+      <Home path='/' />
+      <AnimateGroup path='/animateGroup' />
+      <Parallax path='/parallax' />
+      <Sections path='/sections' />
+    </Router>
+  </div>
+);
 
 export default App;

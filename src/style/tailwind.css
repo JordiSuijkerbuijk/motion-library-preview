@@ -2,6 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'proximanova-thin';
+  src: url('/assets/fonts/proximanova-thin/proximanova-thin.woff2') format('woff2'),
+    url('/assets/fonts/proximanova-thin/proximanova-thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proximanova-light';
+  src: url('/assets/fonts/proximanova-light/proximanova-light.woff2') format('woff2'),
+    url('/assets/fonts/proximanova-light/proximanova-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proximanova-regular';
+  src: url('/assets/fonts/proximanova-regular/proximanova-regular.woff2') format('woff2'),
+    url('/assets/fonts/proximanova-regular/proximanova-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'proximanova-semibold';
+  src: url('/assets/fonts/proximanova-semibold/proximanova-semibold.woff2') format('woff2'),
+    url('/assets/fonts/proximanova-semibold/proximanova-semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: 'proximanova-light';
+}
+
+label {
+  font-family: 'proximanova-regular';
+}
+
+h1 {
+  font-family: 'proximanova-semibold';
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 img {
   max-width: 100%;
 }

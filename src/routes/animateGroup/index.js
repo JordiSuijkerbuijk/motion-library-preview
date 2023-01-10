@@ -14,20 +14,24 @@ const sections = [
 ];
 
 const AnimateGroup = () => {
-  const [options, setOptions] = useState({ duration: 600, type: 'basic' });
+  const [options, setOptions] = useState({
+    duration: 600,
+    type: 'basic',
+    easing: 'easeInOutQuint',
+  });
 
   useEffect(() => {
     //Remove inline styling from previous animation
     removeInlineStyling();
 
     sections.map((item) => {
-      const element = document.querySelector(`#${item.key}`);
-      animateGroup({ target: element, options: { ...options } });
+      const element = document.querySelectorAll(`#${item.key}`);
+      animateGroup({ targets: element, options: { ...options } });
     });
   }, [options]);
 
   return (
-    <div class='grid grid-flow-col grid-cols-auto'>
+    <div class='grid grid-flow-col grid-cols-auto overflow-hidden'>
       <div class='py-28 px-16 gap-8 flex flex-col'>
         {sections.map((item, i) => {
           const Comp = item.value;

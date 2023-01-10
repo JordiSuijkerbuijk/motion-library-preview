@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         black: 'hsl(246 6% 9%)',
+        yellow: '#cca43b',
       },
       gridTemplateColumns: {
         6: '6rem',
