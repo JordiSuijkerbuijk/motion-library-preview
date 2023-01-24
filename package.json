@@ -6,7 +6,7 @@
   "scripts": {
     "build": "preact build",
     "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch",
+    "dev": "concurrently \"preact watch\" \"npm run css\"",
     "css": "npx tailwindcss -i src/style/index.css -c tailwind.config.js -o src/style/tailwind.css --watch",
     "lint": "eslint src",
     "test": "jest"
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "clsx": "^1.2.1",
+    "concurrently": "^7.6.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-preact-pure": "^2.0.0",
     "eslint": "^6.0.1",
